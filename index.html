@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SmartScroll | Brain Upgrade</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Dashboard de Gamificação Superior -->
+        <div class="top-bar">
+            <div class="level-badge" id="lvl-badge">LVL <span id="lvl-num">1</span></div>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-fill"></div>
+            </div>
+            <div class="streak-badge" id="streak-container">🔥 <span id="streak-num">0</span></div>
+            <div class="iq-label">IQ: <span id="score">0</span></div>
+        </div>
+
+        <header>
+            <div class="logo">SMARTSCROLL</div>
+        </header>
+
+        <!-- Container de Cards e Loader -->
+        <div id="card-stack" class="card-stack"></div>
+
+        <!-- Painel de Partilha Rápida Social -->
+        <div class="social-share-bar">
+            <button onclick="shareSocial('x')" class="social-btn x-bg">𝕏</button>
+            <button onclick="shareSocial('fb')" class="social-btn fb-bg">f</button>
+            <button onclick="shareSocial('rd')" class="social-btn rd-bg">r</button>
+        </div>
+
+        <!-- Botões de Ação Principais -->
+        <div class="card-actions">
+            <button id="like-btn" class="circle-btn">❤️</button>
+            <button id="menu-btn" class="main-btn">BIBLIOTECA</button>
+            <button id="share-native" class="circle-btn share-native-btn">🚀</button>
+        </div>
+    </div>
+
+    <!-- Modal de Biblioteca/Favoritos -->
+    <div id="menu-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 class="league-font">SABEDORIA GUARDADA</h2>
+            <div id="favorites-list" class="results-list"></div>
+        </div>
+    </div>
+
+    <!-- Motores de Áudio -->
+    <audio id="snd-flip" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
+    <audio id="snd-level" src="https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
